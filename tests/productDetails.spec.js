@@ -41,17 +41,15 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
   it('Verifica se o array retornado por `productDetails` contém dois itens', () => {
     expect(productDetails()).toHaveLength(2);
   });
-  it('Verifica se `productDetails` retorna uma array', () => {
+  it('Verifica se os dois itens dentro do array retornado pela função `productDetails` são objetos', () => {
     expect(typeof productDetails()[0] && typeof productDetails()[1]).toBe('object');
     expect(typeof productDetails()[0] && typeof productDetails()[1]).not.toBe('function');
   });
-  it('Verifica se s dois itens dentro do array retornado pela função `productDetails` são objetos', () => {
+  it('Verifica se quando passado dois parametros, os itens retornados pela função `productDetails` são diferentes', () => {
     expect(productDetails('água', 'cerveja')[0] !== productDetails('água', 'cerveja')[1]).toBe(true);
     expect(productDetails('água', 'cerveja')[0] !== productDetails('água', 'cerveja')[1]).not.toBe(false);
   });
-  // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
-  it('Verifica se `productDetails` retorna uma array', () => {
-    fail();
+  it('Verifica se os dois productIds da função `productDetails` terminam com 123', () => {
+    expect(productDetails('agua', 'cerveja')[0].details.productId && productDetails('agua', 'cerveja')[1].details.productId).toMatch(/123/);
   });
-  // Teste se os dois productIds terminam com 123.
 });
