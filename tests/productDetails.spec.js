@@ -34,19 +34,25 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect(typeof productDetails).toBe('function');
     expect(typeof productDetails).not.toBe('object');
   });
-  it('Verifica se `productDetails` retorna uma array', () => {
+  it('Verifica se `productDetails` retorna um array', () => {
+    expect(Array.isArray(productDetails())).toBe(true);
+    expect(Array.isArray(productDetails())).not.toBe(false);
   });
   // Teste se o retorno da função é um array.
-  it('Verifica se `productDetails` retorna uma array', () => {
+  it('Verifica se o array retornado por `productDetails` contém dois itens', () => {
+    expect(productDetails()).toHaveLength(2);
   });
   // Teste se o array retornado pela função contém dois itens dentro.
   it('Verifica se `productDetails` retorna uma array', () => {
+    fail();
   });
   // Teste se os dois itens dentro do array retornado pela função são objetos.
-  it('Verifica se `productDetails` retorna uma array', () => {
+  it('Verifica se s dois itens dentro do array retornado pela função `productDetails` são objetos', () => {
+    fail();
   });
   // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
   it('Verifica se `productDetails` retorna uma array', () => {
+    fail();
   });
   // Teste se os dois productIds terminam com 123.
 });
