@@ -23,4 +23,12 @@ const createStudent = (nome) => {
   return obj;
 };
 
+// const createStudent = (name) => {
+//   const feedback = () => 'Eita pessoa boa!';
+//   return { name, feedback };
+// };
+
+const estudante2 = createStudent('Nobre');
+console.log(estudante2);
+
 module.exports = createStudent;
