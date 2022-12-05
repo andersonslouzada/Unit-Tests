@@ -58,11 +58,10 @@ describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
     expect(getCharacter('Melissandre')).toEqual({ name: 'Melissandre', class: 'Necromancer', phrases: ['Death By Fire Is The Purest Death.', 'For The Night Is Dark And Full Of Terrors.'],
     });
   })
-    // 4. Teste se a função retorna o objeto correto para o parâmetro 'Melissandre',
-  // it('Verifica se a função `getCharacter` , quando não recebe nenhum parâmetro, retorna undefined.', () => {
-  //   expect(getCharacter()).toBe(undefined);
-  // })
-  //   // 5. Teste se o parâmetro não é Case Sensitive, ou seja, independente de conter letras maiúsculas ou minúsculas retorna o mesmo objeto relativo a ele.
+  it('Verifica se a função `getCharacter` , não é Case Sensitive e retorna o mesmo objeto quando recebe parâmetros com letras maiúsculas e minúsculas.', () => {
+    expect(getCharacter('Arya')).toEqual(getCharacter('arya'));
+  })
+    // 5. Teste se o parâmetro não é Case Sensitive, ou seja, independente de conter letras maiúsculas ou minúsculas retorna o mesmo objeto relativo a ele.
   // it('Verifica se a função `getCharacter` , quando não recebe nenhum parâmetro, retorna undefined.', () => {
   //   expect(getCharacter()).toBe(undefined);
   // })  
