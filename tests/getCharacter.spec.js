@@ -54,11 +54,11 @@ describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
     expect(getCharacter('Brienne')).toEqual({ name: 'Brienne Tarth', class: 'Knight', phrases: ['Im No Lady, Your Grace.', 'I, Brienne Of Tarth, Sentence You To Die.'],
     });
   })
-    // 3. Teste se a função retorna o objeto correto para o parâmetro 'Brienne',
-  // it('Verifica se a função `getCharacter` , quando não recebe nenhum parâmetro, retorna undefined.', () => {
-  //   expect(getCharacter()).toBe(undefined);
-  // })
-  //   // 4. Teste se a função retorna o objeto correto para o parâmetro 'Melissandre',
+  it('Verifica se a função `getCharacter` retorna o objeto correto para o parâmetro Melissandre', () => {
+    expect(getCharacter('Melissandre')).toEqual({ name: 'Melissandre', class: 'Necromancer', phrases: ['Death By Fire Is The Purest Death.', 'For The Night Is Dark And Full Of Terrors.'],
+    });
+  })
+    // 4. Teste se a função retorna o objeto correto para o parâmetro 'Melissandre',
   // it('Verifica se a função `getCharacter` , quando não recebe nenhum parâmetro, retorna undefined.', () => {
   //   expect(getCharacter()).toBe(undefined);
   // })
